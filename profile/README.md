@@ -9,10 +9,10 @@ TAK.NZ provides multiple repos to deploy TAK infrastructure on AWS. These repos 
 
 A TAK infrasructure is deployed as a stack consisting of multiple layers: 
 
-| Layer Name            | Function |
-| --------------------- | ----- |
-| `coe-base-<name>`     | VPC, ECS cluster, and ECR repository - [repo](https://github.com/TAK-NZ/base-infra)      |
-| `coe-auth-<name>`     | Authentication layer using Authentik - [repo](https://github.com/TAK-NZ/auth-infra)      |
-| `coe-tak-<name>`      | TAK Server layer - [repo](https://github.com/TAK-NZ/tak-infra)      |
+| Layer Name            | Function | Github repo |
+| --------------------- | ----- | ----- |
+| `coe-base-<name>`     | VPC, ECS cluster, and ECR repository | [github.com/TAK-NZ/base-infra](https://github.com/TAK-NZ/base-infra) |
+| `coe-auth-<name>`     | Authentication layer using Authentik | [github.com/TAK-NZ/auth-infra](https://github.com/TAK-NZ/auth-infra) |
+| `coe-tak-<name>`      | TAK Server layer | [github.com/TAK-NZ/tak-infra](https://github.com/TAK-NZ/tak-infra) |
 
-Multiple stacks, e.g. for `Staging` and `Production` use can be deployed in parallel. 
+Each stacks is provided in a `Production` type with full resiliency built-in and a `Dev-Test` type with reduced resiliency for optimized cost. 
