@@ -57,7 +57,7 @@ The TAK infrastructure is provided through multiple layers, each in a distinct G
 Each stacks is provided in a `Prod` type with full resiliency built-in and a `Dev-Test` type with reduced resiliency for optimized cost. 
 
 ### Estimated Cost Breakdown (BaseInfra + AuthInfra + TakInfra)
-Estimated for ap-southeast-2
+Estimated for ap-southeast-2 in USD.
 
 #### Development Environment (~$220/month)
 - **BaseInfra**: ~$44/month (VPC, ECS cluster, S3, KMS, ACM)
