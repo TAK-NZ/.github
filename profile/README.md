@@ -55,3 +55,16 @@ The TAK infrastructure is provided through multiple layers, each in a distinct G
 **Deployment Order**: BaseInfra must be deployed first, followed by AuthInfra, TakInfra, VideoInfra, and finally CloudTAK. Each layer imports outputs from the layer below via CloudFormation exports.
 
 Each stacks is provided in a `Prod` type with full resiliency built-in and a `Dev-Test` type with reduced resiliency for optimized cost. 
+
+### Estimated Cost Breakdown (BaseInfra + AuthInfra + TakInfra)
+Estimated for ap-southeast-2
+
+#### Development Environment (~$220/month)
+- **BaseInfra**: ~$44/month (VPC, ECS cluster, S3, KMS, ACM)
+- **AuthInfra**: ~$85/month (Authentik, LDAP, Aurora, Redis)
+- **TakInfra**: ~$91/month (TAK Server, Aurora, EFS)
+
+#### Production Environment (~$778/month)
+- **BaseInfra**: ~$143/month (VPC, ECS cluster, S3, KMS, ACM, VPC endpoints)
+- **AuthInfra**: ~$245/month (Authentik HA, LDAP, Aurora Multi-AZ, Redis cluster)
+- **TakInfra**: ~$390/month (TAK Server HA, Aurora Multi-AZ, enhanced monitoring)
