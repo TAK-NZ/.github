@@ -13,6 +13,7 @@ The TAK infrastructure is provided through multiple layers, each in a distinct G
 ```
         PRODUCTION ENVIRONMENT                DEMO/TESTING ENVIRONMENT              DEVELOPMENT ENVIRONMENT
         Domain: tak.nz                        Domain: demo.tak.nz                   Domain: dev.tak.nz
+        Deployed via CI/CD                    Deployed via CI/CD                    Deployed manually
 
 ┌─────────────────────────────────┐    ┌─────────────────────────────────┐    ┌─────────────────────────────────┐
 │         CloudTAK                │    │         CloudTAK                │    │         CloudTAK                │
