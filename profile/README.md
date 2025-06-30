@@ -16,13 +16,13 @@ The TAK infrastructure is provided through multiple layers, each in a distinct G
         Deployed via CI/CD                    Deployed via CI/CD                    Deployed manually
 
 ┌─────────────────────────────────┐    ┌─────────────────────────────────┐    ┌─────────────────────────────────┐
-│         CloudTAK                │    │         CloudTAK                │    │         CloudTAK                │
+│        MediaInfra               │    │        MediaInfra               │    │        MediaInfra               │
 │    CloudFormation Stack         │    │    CloudFormation Stack         │    │    CloudFormation Stack         │
 └─────────────────────────────────┘    └─────────────────────────────────┘    └─────────────────────────────────┘
                 │                                        │                                     │
                 ▼                                        ▼                                     ▼
 ┌─────────────────────────────────┐    ┌─────────────────────────────────┐    ┌─────────────────────────────────┐
-│        VideoInfra               │    │        VideoInfra               │    │        VideoInfra               │
+│         CloudTAK                │    │         CloudTAK                │    │         CloudTAK                │
 │    CloudFormation Stack         │    │    CloudFormation Stack         │    │    CloudFormation Stack         │
 └─────────────────────────────────┘    └─────────────────────────────────┘    └─────────────────────────────────┘
                 │                                        │                                     │
@@ -50,8 +50,8 @@ The TAK infrastructure is provided through multiple layers, each in a distinct G
 | **BaseInfra** | [`base-infra`](https://github.com/TAK-NZ/base-infra)  | Foundation: VPC, ECS, S3, KMS, ACM | ✅ Available as CDK project | [![Demo Testing](https://github.com/TAK-NZ/base-infra/actions/workflows/demo-deploy.yml/badge.svg)](https://github.com/TAK-NZ/base-infra/actions/workflows/demo-deploy.yml) [![Production](https://github.com/TAK-NZ/base-infra/actions/workflows/production-deploy.yml/badge.svg)](https://github.com/TAK-NZ/base-infra/actions/workflows/production-deploy.yml) |
 | **AuthInfra** | [`auth-infra`](https://github.com/TAK-NZ/auth-infra) | SSO via Authentik, LDAP | ✅ Available as CDK project | [![Demo Testing](https://github.com/TAK-NZ/auth-infra/actions/workflows/demo-deploy.yml/badge.svg)](https://github.com/TAK-NZ/auth-infra/actions/workflows/demo-deploy.yml) [![Production](https://github.com/TAK-NZ/auth-infra/actions/workflows/production-deploy.yml/badge.svg)](https://github.com/TAK-NZ/auth-infra/actions/workflows/production-deploy.yml) |
 | **TAKInfra** | [`tak-infra`](https://github.com/TAK-NZ/tak-infra) | TAK Server | ✅ Available as CDK project | [![Demo Testing](https://github.com/TAK-NZ/tak-infra/actions/workflows/demo-deploy.yml/badge.svg)](https://github.com/TAK-NZ/tak-infra/actions/workflows/demo-deploy.yml) [![Production](https://github.com/TAK-NZ/tak-infra/actions/workflows/production-deploy.yml/badge.svg)](https://github.com/TAK-NZ/tak-infra/actions/workflows/production-deploy.yml) |
-| **VideoInfra** | [`video-infra`](https://github.com/TAK-NZ/video-infra) | Video Server based on Mediamtx | ❌ Not yet available |
 | **CloudTAK** | [`CloudTAK`](https://github.com/TAK-NZ/CloudTAK) | CloudTAK web interface and ETL | 🚧 CDK project in progress |
+| **MediaInfra** | [`media-infra`](https://github.com/TAK-NZ/video-infra) | Video Server based on Mediamtx | ❌ Not yet available |
 
 **Deployment Order**: BaseInfra must be deployed first, followed by AuthInfra, TakInfra, VideoInfra, and finally CloudTAK. Each layer imports outputs from the layer below via CloudFormation exports.
 
