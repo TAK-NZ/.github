@@ -57,6 +57,12 @@ The TAK infrastructure is provided through multiple layers, each in a distinct G
 
 Each stacks is provided in a `Prod` type with full resiliency built-in and a `Dev-Test` type with reduced resiliency for optimized cost. 
 
+### Examples
+
+TAK.NZ CloudTAK web based TAK client interface. Various real-time data imported with CloudTAK Extract/Transform/Load (ETL) functions are displayed. 
+
+![TAK.NZ CloudTAK Screenshot](images/TAK-NZ-CloudTAK-Example.png)
+
 ### Estimated Cost Breakdown (BaseInfra + AuthInfra + TakInfra)
 Estimated for ap-southeast-2 in USD.
 
