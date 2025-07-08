@@ -16,12 +16,6 @@ The TAK infrastructure is provided through multiple layers, each in a distinct G
         Deployed via CI/CD                    Deployed via CI/CD                    Deployed manually
 
 ┌─────────────────────────────────┐    ┌─────────────────────────────────┐    ┌─────────────────────────────────┐
-│        MediaInfra               │    │        MediaInfra               │    │        MediaInfra               │
-│    CloudFormation Stack         │    │    CloudFormation Stack         │    │    CloudFormation Stack         │
-└─────────────────────────────────┘    └─────────────────────────────────┘    └─────────────────────────────────┘
-                │                                        │                                     │
-                ▼                                        ▼                                     ▼
-┌─────────────────────────────────┐    ┌─────────────────────────────────┐    ┌─────────────────────────────────┐
 │         CloudTAK                │    │         CloudTAK                │    │         CloudTAK                │
 │    CloudFormation Stack         │    │    CloudFormation Stack         │    │    CloudFormation Stack         │
 └─────────────────────────────────┘    └─────────────────────────────────┘    └─────────────────────────────────┘
@@ -51,9 +45,8 @@ The TAK infrastructure is provided through multiple layers, each in a distinct G
 | **AuthInfra** | [`auth-infra`](https://github.com/TAK-NZ/auth-infra) | SSO via Authentik, LDAP | ✅ Available as CDK project | [![Demo Testing](https://github.com/TAK-NZ/auth-infra/actions/workflows/demo-deploy.yml/badge.svg)](https://github.com/TAK-NZ/auth-infra/actions/workflows/demo-deploy.yml) [![Production](https://github.com/TAK-NZ/auth-infra/actions/workflows/production-deploy.yml/badge.svg)](https://github.com/TAK-NZ/auth-infra/actions/workflows/production-deploy.yml) |
 | **TAKInfra** | [`tak-infra`](https://github.com/TAK-NZ/tak-infra) | TAK Server | ✅ Available as CDK project | [![Demo Testing](https://github.com/TAK-NZ/tak-infra/actions/workflows/demo-deploy.yml/badge.svg)](https://github.com/TAK-NZ/tak-infra/actions/workflows/demo-deploy.yml) [![Production](https://github.com/TAK-NZ/tak-infra/actions/workflows/production-deploy.yml/badge.svg)](https://github.com/TAK-NZ/tak-infra/actions/workflows/production-deploy.yml) |
 | **CloudTAK** | [`CloudTAK`](https://github.com/TAK-NZ/CloudTAK) | CloudTAK web interface and ETL | 🚧 CDK project in progress |
-| **MediaInfra** | [`media-infra`](https://github.com/TAK-NZ/video-infra) | Video Server based on Mediamtx | ❌ Not yet available |
 
-**Deployment Order**: BaseInfra must be deployed first, followed by AuthInfra, TakInfra, CloudTAK, and finally MediaInfra. Each layer imports outputs from layers below via CloudFormation exports.
+**Deployment Order**: BaseInfra must be deployed first, followed by AuthInfra, TakInfra, and finally CloudTAK. Each layer imports outputs from layers below via CloudFormation exports.
 
 Each stacks is provided in a `Prod` type with full resiliency built-in and a `Dev-Test` type with reduced resiliency for optimized cost. 
 
