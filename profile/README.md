@@ -52,8 +52,7 @@ Each stacks is provided in a `Prod` type with full resiliency built-in and a `De
 
 ### Try this yourself
 
-You want to install TAK (Team Awareness Kit) infrastructure on AWS, using the TAK.NZ stack? 
-Try the [One-line installer](https://github.com/TAK-NZ/tak-deploy), which will get you up and running in about 1 hour. 
+Deploy the TAK.NZ stack (Team Awareness Kit) on AWS in ~1 hour with our [One-line installer](https://github.com/TAK-NZ/tak-deploy).
 
 ### Examples
 
