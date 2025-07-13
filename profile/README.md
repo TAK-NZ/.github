@@ -16,6 +16,12 @@ The TAK infrastructure is provided through multiple layers, each in a distinct G
         Deployed via CI/CD                    Deployed via CI/CD                    Deployed manually
 
 ┌─────────────────────────────────┐    ┌─────────────────────────────────┐    ┌─────────────────────────────────┐
+│         MediaInfra              │    │         MediaInfra              │    │         MediaInfra              │
+│    CloudFormation Stack         │    │    CloudFormation Stack         │    │    CloudFormation Stack         │
+└─────────────────────────────────┘    └─────────────────────────────────┘    └─────────────────────────────────┘
+                │                                        │                                     │
+                ▼                                        ▼                                     ▼
+┌─────────────────────────────────┐    ┌─────────────────────────────────┐    ┌─────────────────────────────────┐
 │         CloudTAK                │    │         CloudTAK                │    │         CloudTAK                │
 │    CloudFormation Stack         │    │    CloudFormation Stack         │    │    CloudFormation Stack         │
 └─────────────────────────────────┘    └─────────────────────────────────┘    └─────────────────────────────────┘
@@ -44,9 +50,10 @@ The TAK infrastructure is provided through multiple layers, each in a distinct G
 | [**BaseInfra**](https://github.com/TAK-NZ/base-infra)  | Foundation: VPC, ECS, S3, KMS, ACM | ✅ Available as CDK project | [![Demo Testing](https://github.com/TAK-NZ/base-infra/actions/workflows/demo-deploy.yml/badge.svg)](https://github.com/TAK-NZ/base-infra/actions/workflows/demo-deploy.yml) [![Production](https://github.com/TAK-NZ/base-infra/actions/workflows/production-deploy.yml/badge.svg)](https://github.com/TAK-NZ/base-infra/actions/workflows/production-deploy.yml) |
 | [**AuthInfra**](https://github.com/TAK-NZ/auth-infra) | SSO via Authentik, LDAP | ✅ Available as CDK project | [![Demo Testing](https://github.com/TAK-NZ/auth-infra/actions/workflows/demo-deploy.yml/badge.svg)](https://github.com/TAK-NZ/auth-infra/actions/workflows/demo-deploy.yml) [![Production](https://github.com/TAK-NZ/auth-infra/actions/workflows/production-deploy.yml/badge.svg)](https://github.com/TAK-NZ/auth-infra/actions/workflows/production-deploy.yml) |
 | [**TAKInfra**](https://github.com/TAK-NZ/tak-infra) | TAK Server | ✅ Available as CDK project | [![Demo Testing](https://github.com/TAK-NZ/tak-infra/actions/workflows/demo-deploy.yml/badge.svg)](https://github.com/TAK-NZ/tak-infra/actions/workflows/demo-deploy.yml) [![Production](https://github.com/TAK-NZ/tak-infra/actions/workflows/production-deploy.yml/badge.svg)](https://github.com/TAK-NZ/tak-infra/actions/workflows/production-deploy.yml) |
-| [**CloudTAK**](https://github.com/TAK-NZ/CloudTAK) | CloudTAK web interface, ETL, and media services | 🚧 CDK project in progress |
+| [**CloudTAK**](https://github.com/TAK-NZ/CloudTAK) | CloudTAK web interface, ETL | ✅ Available as CDK project | [![Demo Testing](https://github.com/TAK-NZ/CloudTAK/actions/workflows/demo-deploy.yml/badge.svg)](https://github.com/TAK-NZ/CloudTAK/actions/workflows/demo-deploy.yml) [![Production](https://github.com/TAK-NZ/CloudTAK/actions/workflows/production-deploy.yml/badge.svg)](https://github.com/TAK-NZ/CloudTAK/actions/workflows/production-deploy.yml) |
+| [**MediaInfra**](https://github.com/TAK-NZ/media-infra) | Video Streaming | 🚧 CDK project in progress | |
 
-**Deployment Order**: BaseInfra must be deployed first, followed by AuthInfra, TakInfra, and finally CloudTAK. Each layer imports outputs from layers below via CloudFormation exports.
+**Deployment Order**: BaseInfra must be deployed first, followed by AuthInfra, TakInfra, CloudTAK, and finally MediaInfra. Each layer imports outputs from layers below via CloudFormation exports.
 
 Each stacks is provided in a `Prod` type with full resiliency built-in and a `Dev-Test` type with reduced resiliency for optimized cost. 
 
@@ -63,12 +70,14 @@ TAK.NZ CloudTAK web based TAK client interface. Various real-time data imported 
 ### Estimated Cost Breakdown (BaseInfra + AuthInfra + TakInfra)
 Estimated for ap-southeast-2 in USD.
 
-#### Development Environment (~$220/month)
+#### Development Environment (~$265/month)
 - **BaseInfra**: ~$44/month (VPC, ECS cluster, S3, KMS, ACM)
 - **AuthInfra**: ~$85/month (Authentik, LDAP, Aurora, Redis)
 - **TakInfra**: ~$91/month (TAK Server, Aurora, EFS)
+- **CloudTAK**: ~$45/month (CloudTAK server, Aurora, Lambda, API Gateway)
 
-#### Production Environment (~$778/month)
+#### Production Environment (~$958/month)
 - **BaseInfra**: ~$143/month (VPC, ECS cluster, S3, KMS, ACM, VPC endpoints)
 - **AuthInfra**: ~$245/month (Authentik HA, LDAP, Aurora Multi-AZ, Redis cluster)
 - **TakInfra**: ~$390/month (TAK Server HA, Aurora Multi-AZ, enhanced monitoring)
+- **CloudTAK**: ~$180/month (CloudTAK server, Aurora Multi-AZ, Lambda, API Gateway, enhanced monitoring)
