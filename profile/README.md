@@ -66,18 +66,3 @@ Deploy the TAK.NZ stack (Team Awareness Kit) on AWS in ~1 hour with our [One-lin
 TAK.NZ CloudTAK web based TAK client interface. Various real-time data imported with CloudTAK Extract/Transform/Load (ETL) functions are displayed. 
 
 ![TAK.NZ CloudTAK Screenshot](images/TAK-NZ-CloudTAK-Example.png)
-
-### Estimated Cost Breakdown (BaseInfra + AuthInfra + TakInfra)
-Estimated for ap-southeast-2 in USD.
-
-#### Development Environment (~$265/month)
-- **BaseInfra**: ~$44/month (VPC, ECS cluster, S3, KMS, ACM)
-- **AuthInfra**: ~$85/month (Authentik, LDAP, Aurora, Redis)
-- **TakInfra**: ~$91/month (TAK Server, Aurora, EFS)
-- **CloudTAK**: ~$45/month (CloudTAK server, Aurora, Lambda, API Gateway)
-
-#### Production Environment (~$958/month)
-- **BaseInfra**: ~$143/month (VPC, ECS cluster, S3, KMS, ACM, VPC endpoints)
-- **AuthInfra**: ~$245/month (Authentik HA, LDAP, Aurora Multi-AZ, Redis cluster)
-- **TakInfra**: ~$390/month (TAK Server HA, Aurora Multi-AZ, enhanced monitoring)
-- **CloudTAK**: ~$180/month (CloudTAK server, Aurora Multi-AZ, Lambda, API Gateway, enhanced monitoring)
