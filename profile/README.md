@@ -64,9 +64,12 @@ TAK.NZ uses CloudTAK's ETL capabilities to extract, transform and load 3rd party
 | ETL | Description | Data Source | Availability | CI/CD pipeline |
 |-----|-------------|-------------|--------------|----------------|
 | [**ETL-ADSBX**](https://github.com/TAK-NZ/etl-adsbx)  | Aircraft location data via ADS-B | [ADSBExchange.com](https://www.adsbexchange.com/) | ✅ | [![Build and Deploy ETL](https://github.com/TAK-NZ/etl-adsbx/actions/workflows/etl-deploy.yml/badge.svg)](https://github.com/TAK-NZ/etl-adsbx/actions/workflows/etl-deploy.yml) |
+| [**ETL-AIS**](https://github.com/TAK-NZ/etl-ais) | Vessel locations based on automatic identification system (AIS) data |  | 🚧 |  |
+| [**ETL-APRS**](https://github.com/TAK-NZ/etl-aprs)  | Amateur Radio Automatic Packet Reporting System (APRS) location data | aprs.net | 🚧 |  |
 | [**ETL-Earthquakes**](https://github.com/TAK-NZ/etl-earthquakes)  | Earthquake epicenter locations | [USGS](https://www.usgs.gov/programs/earthquake-hazards) | ✅ | [![Build and Deploy ETL](https://github.com/TAK-NZ/etl-earthquakes/actions/workflows/etl-deploy.yml/badge.svg)](https://github.com/TAK-NZ/etl-earthquakes/actions/workflows/etl-deploy.yml) |
-| [**ETL-InReach**](https://github.com/TAK-NZ/etl-inreach)  | Garmin InReach saletite messenger tracking | [Garmin InReach](https://www.garmin.com/en-NZ/c/outdoor-recreation/satellite-communicators/) | 🚧 |  |
 | [**ETL-GeoJSON**](https://github.com/TAK-NZ/etl-geojson)  | Any GeoJSON data from an HTTP(S) endpoint |  | 🚧 |  |
+| [**ETL-InReach**](https://github.com/TAK-NZ/etl-inreach)  | Garmin InReach saletite messenger tracking | [Garmin InReach](https://www.garmin.com/en-NZ/c/outdoor-recreation/satellite-communicators/) | 🚧 |  |
+
 
 ## Try this yourself
 
