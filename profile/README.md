@@ -67,7 +67,7 @@ TAK.NZ uses CloudTAK's ETL capabilities to extract, transform and load 3rd party
 | [**ETL-AIS**](https://github.com/TAK-NZ/etl-ais) | Vessel locations based on automatic identification system (AIS) data |  | 🚧 |  |
 | [**ETL-APRS**](https://github.com/TAK-NZ/etl-aprs)  | Amateur Radio Automatic Packet Reporting System (APRS) location data | aprs.net | 🚧 |  |
 | [**ETL-GeoNet-Quakes**](https://github.com/TAK-NZ/etl-geonet-quakes)  | Earthquake epicenter locations | [GeoNet New Zealand](https://www.geonet.org.nz/) | ✅ | [![Build and Deploy ETL](https://github.com/TAK-NZ/etl-geonet-quakes/actions/workflows/etl-deploy.yml/badge.svg)](https://github.com/TAK-NZ/etl-geonet-quakes/actions/workflows/etl-deploy.yml) |
-| [**ETL-GeoJSON**](https://github.com/TAK-NZ/etl-geojson)  | Any GeoJSON data from an HTTP(S) endpoint | [NZ Transport Agency Waka Kotahi](https://nzta.govt.nz/), [GeoNet New Zealand](https://www.geonet.org.nz/) | 🚧 |  |
+| [**ETL-GeoJSON**](https://github.com/TAK-NZ/etl-geojson)  | Any GeoJSON data from an HTTP(S) endpoint | [NZ Transport Agency Waka Kotahi](https://nzta.govt.nz/), [GeoNet New Zealand](https://www.geonet.org.nz/) | ✅ | [![Build and Deploy ETL](https://github.com/TAK-NZ/etl-geojson/actions/workflows/etl-deploy.yml/badge.svg)](https://github.com/TAK-NZ/etl-geojson/actions/workflows/etl-deploy.yml) |
 | [**ETL-InReach**](https://github.com/TAK-NZ/etl-inreach)  | Garmin InReach satellite messenger tracking | [Garmin InReach](https://www.garmin.com/en-NZ/c/outdoor-recreation/satellite-communicators/) | 🚧 |  |
 
 
