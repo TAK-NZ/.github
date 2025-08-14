@@ -84,5 +84,5 @@ TAK.NZ CloudTAK web based TAK client interface. Various real-time data imported 
 
 ## License
 
-TAK.NZ is distributed under [AGPL-3.0-only](LICENSE)
+TAK.NZ is distributed under [AGPL-3.0-only](../LICENSE)
 Copyright (C) 2025 - Christian Elsen, Team Awareness Kit New Zealand (TAK.NZ)
