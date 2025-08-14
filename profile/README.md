@@ -81,3 +81,8 @@ Deploy the TAK.NZ stack (Team Awareness Kit) on AWS in ~1 hour with our [One-lin
 TAK.NZ CloudTAK web based TAK client interface. Various real-time data imported with CloudTAK Extract/Transform/Load (ETL) functions are displayed. 
 
 ![TAK.NZ CloudTAK Screenshot](images/TAK-NZ-CloudTAK-Example.png)
+
+## License
+
+TAK.NZ is distributed under [AGPL-3.0-only](LICENSE)
+Copyright (C) 2025 - Christian Elsen, Team Awareness Kit New Zealand (TAK.NZ)
