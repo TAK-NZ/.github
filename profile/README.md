@@ -72,6 +72,14 @@ TAK.NZ uses CloudTAK's ETL capabilities to extract, transform and load 3rd party
 | [**ETL-InReach**](https://github.com/TAK-NZ/etl-inreach)  | Garmin InReach satellite messenger tracking | [Garmin InReach](https://www.garmin.com/en-NZ/c/outdoor-recreation/satellite-communicators/) | ✅ | [![Build and Deploy ETL](https://github.com/TAK-NZ/etl-inreach/actions/workflows/etl-deploy.yml/badge.svg)](https://github.com/TAK-NZ/etl-inreach/actions/workflows/etl-deploy.yml) |
 | [**ETL-Utils**](https://github.com/TAK-NZ/etl-utils)  | Various utility functions to support other ETLs | [Rain Viewer](https://www.rainviewer.com/api.html), [aisstream.io](https://aisstream.io/) | ✅ | [![Demo Testing Pipeline](https://github.com/TAK-NZ/etl-utils/actions/workflows/demo-deploy.yml/badge.svg)](https://github.com/TAK-NZ/etl-utils/actions/workflows/demo-deploy.yml) [![Production](https://github.com/TAK-NZ/etl-utils/actions/workflows/production-deploy.yml/badge.svg)](https://github.com/TAK-NZ/etl-utils/actions/workflows/production-deploy.yml) |
 
+## Symbology
+
+TAK.NZ provides custom iconsets based on New Zealand standards:
+
+| Iconset | Description | Standard | Availability |
+|---------|-------------|----------|--------------|
+| [**GEMA NZEM Symbology Set**](https://github.com/TAK-NZ/iconset-nzem-symbology) | Emergency management symbols for TAK | [GEMA New Zealand Emergency Management](https://hub.gema.nz/) | ✅ |
+
 ## Try this yourself
 
 Deploy the TAK.NZ stack (Team Awareness Kit) on AWS in ~1 hour with our [One-line installer](https://tak.nz/tak-deploy/).
