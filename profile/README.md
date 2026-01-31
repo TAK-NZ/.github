@@ -16,6 +16,12 @@ The TAK infrastructure is provided through multiple layers, each in a distinct G
         Deployed via CI/CD                    Deployed via CI/CD                    Deployed manually
 
 ┌─────────────────────────────────┐    ┌─────────────────────────────────┐    ┌─────────────────────────────────┐
+│         UtilsInfra              │    │         UtilsInfra              │    │         UtilsInfra              │
+│    CloudFormation Stack         │    │    CloudFormation Stack         │    │    CloudFormation Stack         │
+└─────────────────────────────────┘    └─────────────────────────────────┘    └─────────────────────────────────┘
+                │                                        │                                     │
+                ▼                                        ▼                                     ▼
+┌─────────────────────────────────┐    ┌─────────────────────────────────┐    ┌─────────────────────────────────┐
 │         MediaInfra              │    │         MediaInfra              │    │         MediaInfra              │
 │    CloudFormation Stack         │    │    CloudFormation Stack         │    │    CloudFormation Stack         │
 └─────────────────────────────────┘    └─────────────────────────────────┘    └─────────────────────────────────┘
