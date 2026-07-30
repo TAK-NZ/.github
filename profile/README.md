@@ -93,6 +93,7 @@ TAK.NZ provides custom iconsets based on New Zealand standards:
 |---------|-------------|----------|--------------|
 | [**GEMA NZEM Symbology Set**](https://github.com/TAK-NZ/iconset-nzem-symbology) | Emergency management symbols for TAK | [GEMA New Zealand Emergency Management](https://hub.gema.nz/) | ✅ |
 | [**Public Safety Vessels Symbology Set**](https://github.com/TAK-NZ/iconset-pubsafety-vessels) | Custom TAK iconset for public safety vessels used in New Zealand emergency management operations |  | ✅ |
+| [**Safeswim**](https://github.com/TAK-NZ/etl-safeswim/tree/main/iconset) | A custom TAK iconset for Safeswim beach water quality and lifeguard patrol status |  | ✅ |
 
 ## Try this yourself
 
