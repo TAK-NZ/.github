@@ -11,44 +11,44 @@ TAK.NZ provides multiple repos to deploy TAK infrastructure on AWS. These repos 
 The TAK infrastructure is provided through multiple layers, each in a distinct GitHib repo. Layers can be deployed in multiple independent environments. As an example:
 
 ```
-        PRODUCTION ENVIRONMENT                DEMO/TESTING ENVIRONMENT              DEVELOPMENT ENVIRONMENT
-        Domain: tak.nz                        Domain: demo.tak.nz                   Domain: dev.tak.nz
-        Deployed via CI/CD                    Deployed via CI/CD                    Deployed manually
-
-┌─────────────────────────────────┐    ┌─────────────────────────────────┐    ┌─────────────────────────────────┐
-│         UtilsInfra              │    │         UtilsInfra              │    │         UtilsInfra              │
-│    CloudFormation Stack         │    │    CloudFormation Stack         │    │    CloudFormation Stack         │
-└─────────────────────────────────┘    └─────────────────────────────────┘    └─────────────────────────────────┘
-                │                                        │                                     │
-                ▼                                        ▼                                     ▼
-┌─────────────────────────────────┐    ┌─────────────────────────────────┐    ┌─────────────────────────────────┐
-│         MediaInfra              │    │         MediaInfra              │    │         MediaInfra              │
-│    CloudFormation Stack         │    │    CloudFormation Stack         │    │    CloudFormation Stack         │
-└─────────────────────────────────┘    └─────────────────────────────────┘    └─────────────────────────────────┘
-                │                                        │                                     │
-                ▼                                        ▼                                     ▼
-┌─────────────────────────────────┐    ┌─────────────────────────────────┐    ┌─────────────────────────────────┐
-│         CloudTAK                │    │         CloudTAK                │    │         CloudTAK                │
-│    CloudFormation Stack         │    │    CloudFormation Stack         │    │    CloudFormation Stack         │
-└─────────────────────────────────┘    └─────────────────────────────────┘    └─────────────────────────────────┘
-                │                                        │                                     │
-                ▼                                        ▼                                     ▼
-┌─────────────────────────────────┐    ┌─────────────────────────────────┐    ┌─────────────────────────────────┐
-│         TakInfra                │    │         TakInfra                │    │         TakInfra                │
-│    CloudFormation Stack         │    │    CloudFormation Stack         │    │    CloudFormation Stack         │
-└─────────────────────────────────┘    └─────────────────────────────────┘    └─────────────────────────────────┘
-                │                                        │                                     │
-                ▼                                        ▼                                     ▼
-┌─────────────────────────────────┐    ┌─────────────────────────────────┐    ┌─────────────────────────────────┐
-│        AuthInfra                │    │        AuthInfra                │    │        AuthInfra                │
-│    CloudFormation Stack         │    │    CloudFormation Stack         │    │    CloudFormation Stack         │
-└─────────────────────────────────┘    └─────────────────────────────────┘    └─────────────────────────────────┘
-                │                                        │                                     │
-                ▼                                        ▼                                     ▼
-┌─────────────────────────────────┐    ┌─────────────────────────────────┐    ┌─────────────────────────────────┐
-│        BaseInfra                │    │        BaseInfra                │    │        BaseInfra                │
-│    CloudFormation Stack         │    │    CloudFormation Stack         │    │    CloudFormation Stack         │
-└─────────────────────────────────┘    └─────────────────────────────────┘    └─────────────────────────────────┘
+        PRODUCTION ENVIRONMENT      .        DEMO ENVIRONMENT             .       DEVELOPMENT ENVIRONMENT
+        Domain: tak.nz              .        Domain: preview.tak.nz       .       Domain: dev.tak.nz
+        Deployed via CI/CD          .        Deployed via CI/CD           .       Deployed manually
+                                    .                                     .               
+┌──────────────┐                    . ┌──────────────┐                    . ┌──────────────┐
+│ UtilsInfra   │                    . │ UtilsInfra   │                    . │ UtilsInfra   │
+│              │                    . │              │                    . │              │
+└──────────────┘                    . └──────────────┘                    . └──────────────┘
+       │                            .        │                            .        │
+       ▼                            .        ▼                            .        ▼
+┌──────────────┐                    . ┌──────────────┐                    . ┌──────────────┐
+│ MediaInfra   │                    . │ MediaInfra   │                    . │ MediaInfra   │
+│              │                    . │              │                    . │              │
+└──────────────┘                    . └──────────────┘                    . └──────────────┘
+       │                            .        │                            .        │
+       ▼                            .        ▼                            .        ▼
+┌──────────────┐   ┌──────────────┐ . ┌──────────────┐   ┌──────────────┐ . ┌──────────────┐   ┌──────────────┐
+│ CloudTAK     │   │ Team Manager │ . │ CloudTAK     │   │ Team Manager │ . │ CloudTAK     │   │ Team Manager │
+│              │   │              │ . │              │   │              │ . │              │   │              │
+└──────────────┘   └──────────────┘ . └──────────────┘   └──────────────┘ . └──────────────┘   └──────────────┘
+       │               │     │      .        │               │     │      .        │               │     │
+       ▼               ▼     │      .        ▼               ▼     │      .        ▼               ▼     │
+┌─────────────────────────┐  │      . ┌─────────────────────────┐  │      . ┌─────────────────────────┐  │
+│         TakInfra        │  │      . │         TakInfra        │  │      . │         TakInfra        │  │
+│                         │  │      . │                         │  │      . │                         │  │
+└─────────────────────────┘  │      . └─────────────────────────┘  │      . └─────────────────────────┘  │
+                │            │      .                 │            │      .                 │            │
+                ▼            ▼      .                 ▼            ▼      .                 ▼            ▼
+┌─────────────────────────────────┐ . ┌─────────────────────────────────┐ . ┌─────────────────────────────────┐
+│        AuthInfra                │ . │        AuthInfra                │ . │        AuthInfra                │
+│                                 │ . │                                 │ . │                                 │
+└─────────────────────────────────┘ . └─────────────────────────────────┘ . └─────────────────────────────────┘
+                │                   .                   │                 .                  │
+                ▼                   .                   ▼                 .                  ▼
+┌─────────────────────────────────┐ . ┌─────────────────────────────────┐ . ┌─────────────────────────────────┐
+│        BaseInfra                │ . │        BaseInfra                │ . │        BaseInfra                │
+│                                 │ . │                                 │ . │                                 │
+└─────────────────────────────────┘ . └─────────────────────────────────┘ . └─────────────────────────────────┘
 ```
 
 | Layer | Description | Status | CI/CD pipeline |
