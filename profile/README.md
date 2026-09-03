@@ -61,7 +61,7 @@ The TAK infrastructure is provided through multiple layers, each in a distinct G
 | [**MediaInfra**](https://github.com/TAK-NZ/media-infra) | Media Streaming | ✅ Available | [![Demo Testing](https://github.com/TAK-NZ/media-infra/actions/workflows/demo-deploy.yml/badge.svg)](https://github.com/TAK-NZ/media-infra/actions/workflows/demo-deploy.yml) [![Production](https://github.com/TAK-NZ/media-infra/actions/workflows/production-deploy.yml/badge.svg)](https://github.com/TAK-NZ/media-infra/actions/workflows/production-deploy.yml) |
 | [**UtilsInfra**](https://github.com/TAK-NZ/utils-infra)  | Various utility functions | ✅ Available | [![Demo Testing Pipeline](https://github.com/TAK-NZ/utils-infra/actions/workflows/demo-deploy.yml/badge.svg)](https://github.com/TAK-NZ/utils-infra/actions/workflows/demo-deploy.yml) [![Production](https://github.com/TAK-NZ/utils-infra/actions/workflows/production-deploy.yml/badge.svg)](https://github.com/TAK-NZ/utils-infra/actions/workflows/production-deploy.yml) |
 
-**Deployment Order**: BaseInfra must be deployed first, followed by AuthInfra, TakInfra, CloudTAK, and finally MediaInfra. Each layer imports outputs from layers below via CloudFormation exports.
+**Deployment Order**: BaseInfra must be deployed first, followed by AuthInfra, TakInfra, Team Manager, CloudTAK, and finally MediaInfra. Each layer imports outputs from layers below via CloudFormation exports.
 
 Each stacks is provided in a `Prod` type with full resiliency built-in and a `Dev-Test` type with reduced resiliency for optimized cost. 
 
