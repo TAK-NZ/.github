@@ -105,6 +105,10 @@ TAK.NZ CloudTAK web based TAK client interface. Various real-time data imported 
 
 ![TAK.NZ CloudTAK Screenshot](images/TAK-NZ-CloudTAK-Example.png)
 
+## Project Management
+
+- [TAK.NZ Roadmap](https://github.com/orgs/TAK-NZ/projects/2)
+
 ## License
 
 TAK.NZ is distributed under [AGPL-3.0-only](../LICENSE)\
