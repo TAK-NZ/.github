@@ -95,9 +95,6 @@ TAK.NZ provides custom iconsets based on New Zealand standards:
 | [**Public Safety Vessels Symbology Set**](https://github.com/TAK-NZ/iconset-pubsafety-vessels) | Custom TAK iconset for public safety vessels used in New Zealand emergency management operations |  | ✅ |
 | [**Safeswim**](https://github.com/TAK-NZ/etl-safeswim/tree/main/iconset) | A custom TAK iconset for Safeswim beach water quality and lifeguard patrol status |  | ✅ |
 
-## Try this yourself
-
-Deploy the TAK.NZ stack (Team Awareness Kit) on AWS in ~1 hour with our [One-line installer](https://tak.nz/tak-deploy/).
 
 ## Examples
 
