@@ -85,6 +85,15 @@ TAK.NZ uses CloudTAK's ETL capabilities to extract, transform and load 3rd party
 | [**ETL-SafeSwim**](https://github.com/TAK-NZ/etl-safeswim)  | Beach water quality and lifeguard patrol status | [Safeswim](https://safeswim.org.nz/) | ✅ Available | [![Build and Deploy ETL](https://github.com/TAK-NZ/etl-safeswim/actions/workflows/etl-deploy.yml/badge.svg)](https://github.com/TAK-NZ/etl-safeswim/actions/workflows/etl-deploy.yml) |
 | [**ETL-WLG-Metlink**](https://github.com/TAK-NZ/etl-wlg-metlink)  | [Wellington Metlink](https://www.metlink.org.nz/) vehicle locations | [Metlink Open Data](https://opendata.metlink.org.nz/) | ✅ Available | [![Build and Deploy ETL](https://github.com/TAK-NZ/etl-wlg-metlink/actions/workflows/etl-deploy.yml/badge.svg)](https://github.com/TAK-NZ/etl-wlg-metlink/actions/workflows/etl-deploy.yml) |
 
+## CloudTAK plugins
+
+TAK.NZ uses the following plugins to extend the functionality of CloudTAK:
+
+| Plugin | Description | Availability |
+|---------|-------------|----------|
+| [**Rubbersheets**](https://github.com/TAK-NZ/cloudtak-plugin-rubbersheet) | Use a photo or PDF, georectify it, and overlay it directly onto your digital map. | ✅ |
+
+
 ## Symbology
 
 TAK.NZ provides custom iconsets based on New Zealand standards:
