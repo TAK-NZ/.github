@@ -93,6 +93,7 @@ TAK.NZ uses the following plugins to extend the functionality of CloudTAK:
 |---------|-------------|----------|
 | [**Live Weather**](https://github.com/TAK-NZ/cloudtak-plugin-weather) | Overlay current precipitation, clouds or rain radar onto your digital map. | ✅ |
 | [**Rubbersheets**](https://github.com/TAK-NZ/cloudtak-plugin-rubbersheet) | Use a photo or PDF, georectify it, and overlay it directly onto your digital map. | ✅ |
+| [**SAR travel time**](https://github.com/TAK-NZ/cloudtak-plugin-sar) | Terrain-aware search and rescue range rings and travel-time isochrones for New Zealand. | ✅ |
 
 ## Symbology
 
